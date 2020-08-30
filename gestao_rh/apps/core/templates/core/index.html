@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 {% block main %}
-    Seja Bem-Vindo {{ usuario.colaborador.nome }}!!!
+Seja Bem-Vindo {{ usuario.colaborador.nome }}!!!
 
-    {% if usuario.colaborador.empresa %}}
-        <a href="{% url 'edit_empresa' usuario.colaborador.empresa.id %}">Editar Empresa</a>
-    {% else %}
-        <a href="{% url 'create_empresa' %}">Criar nova Empresa</a>
-    {% endif %}
+{% if usuario.colaborador.empresa %}}
+<a href="{% url 'edit_empresa' usuario.colaborador.empresa.id %}">Editar Empresa</a>
+{% else %}
+<a href="{% url 'create_empresa' %}">Criar nova Empresa</a>
+{% endif %}
 
-    <a href="{% url 'logout' %}">Sair</a>
+<a href="{% url 'list_colaboradores'%}">Gerenciar Colaboradores</a>
+
+<a href="{% url 'logout' %}">Sair</a>
 {% endblock %}
