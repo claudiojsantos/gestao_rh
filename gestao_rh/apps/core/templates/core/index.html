@@ -10,6 +10,7 @@ Seja Bem-Vindo {{ usuario.colaborador.nome }}!!!
 {% endif %}
 
 <a href="{% url 'list_colaboradores'%}">Gerenciar Colaboradores</a>
+<a href="{% url 'list_departamentos' %}">Gerenciar Departamentos</a>
 
 <a href="{% url 'logout' %}">Sair</a>
 {% endblock %}
